@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { render } from 'react-dom'
-import { Router, Link } from '@reach/router'
-import ThemeContext from './ThemeContext'
+import { Router } from '@reach/router'
 import NavBar from './NavBar'
 import Details from './Details'
 import SearchParams from './SearchParams'
+import { Provider } from 'react-redux'
+import store from './store'
 
 // your code is going to go here
 const App = () => {
-  const themeHook = useState('peru')
   return (
     <React.StrictMode>
-      <ThemeContext.Provider value={themeHook}>
+      <Provider store={store}>
         <div>
           <NavBar />
 
@@ -20,7 +20,7 @@ const App = () => {
             <Details path="/details/:id"></Details>
           </Router>
         </div>
-      </ThemeContext.Provider>
+      </Provider>
     </React.StrictMode>
   )
 }
