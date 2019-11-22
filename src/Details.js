@@ -1,15 +1,10 @@
-import React, { lazy } from 'react'
+import React from 'react'
 import pet from '@frontendmasters/pet'
 import Carousel from './Carousel'
 import ErrorBoundary from './ErrorBoundary'
 import ThemeContext from './ThemeContext'
 import { navigate } from '@reach/router'
-// import Modal from './Modal'
-import _ from 'lodash'
-import moment from 'moment'
-
-const Modal = lazy(() => import('./Modal'))
-console.log(_, moment)
+import Modal from './Modal'
 
 class Details extends React.Component {
   state = { loading: true, showModal: false }
