@@ -1,11 +1,11 @@
 import React, { useState, lazy, Suspense } from 'react'
 import { render } from 'react-dom'
-import SearchParams from './SearchParams'
 import { Router, Link } from '@reach/router'
 import ThemeContext from './ThemeContext'
 import NavBar from './NavBar'
 
 const Details = lazy(() => import('./Details'))
+const SearchParams = lazy(() => import('./SearchParams'))
 
 // your code is going to go here
 const App = () => {
