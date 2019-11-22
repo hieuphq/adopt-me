@@ -37,6 +37,7 @@
     "@emotion/core": "^10.0.22",
     "@frontendmasters/pet": "^1.0.3",
     "@reach/router": "^1.2.1",
+    "moment": "^2.24.0",
     "react": "15.x || 16.x || 16.4.0-alpha.0911da3",
     "react-dom": "15.x || 16.x || 16.4.0-alpha.0911da3"
   },

@@ -1,11 +1,10 @@
-import React, { useState, lazy, Suspense } from 'react'
+import React, { useState } from 'react'
 import { render } from 'react-dom'
-import SearchParams from './SearchParams'
 import { Router, Link } from '@reach/router'
 import ThemeContext from './ThemeContext'
 import NavBar from './NavBar'
-
-const Details = lazy(() => import('./Details'))
+import Details from './Details'
+import SearchParams from './SearchParams'
 
 // your code is going to go here
 const App = () => {
@@ -16,12 +15,10 @@ const App = () => {
         <div>
           <NavBar />
 
-          <Suspense fallback={<h1>loading route...</h1>}>
-            <Router>
-              <SearchParams path="/" />
-              <Details path="/details/:id"></Details>
-            </Router>
-          </Suspense>
+          <Router>
+            <SearchParams path="/" />
+            <Details path="/details/:id"></Details>
+          </Router>
         </div>
       </ThemeContext.Provider>
     </React.StrictMode>
